@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decor Company</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #2C3E50;
+            color: #ECF0F1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #2C3E50;
+            color: #ECF0F1;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .about-section,
+        .contact-section,
+        .services-section,
+        .gallery-section {
+            background-color: #3498DB;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            color: #ECF0F1;
+            padding: 20px;
+        }
+
+        .services-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #BDC3C7;
+            border-radius: 4px;
+        }
+
+        input[type="button"] {
+            background-color: #2C3E50;
+            color: #ECF0F1;
+            cursor: pointer;
+        }
+
+        h2 {
+            color: #2C3E50;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .image-container img {
+            width: 30%;
+            margin: 10px;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to our Decor Company</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="about-section">
+        <h2>About Us</h2>
+        <p>Welcome to Decor Company, where creativity meets comfort. Our team of skilled designers is dedicated to
+            transforming spaces and bringing your visions to life. With a focus on quality and innovation, we create
+            personalized solutions that reflect your unique style.</p>
+    </section>
+
+    <section id="about" class="services-section">
+        <h2>Our Services</h2>
+        <p>Explore our wide range of services, including interior design, furniture selection, color consultations, and
+            more. We tailor our offerings to meet your specific needs and preferences, ensuring a seamless and enjoyable
+            experience throughout the design process.</p>
+        <img src="service1.jpg" alt="Service Image 1">
+        <img src="service2.jpg" alt="Service Image 2">
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <h2>Gallery</h2>
+        <div class="image-container">
+            <img src="image1.jpg" alt="Gallery Image 1">
+            <img src="image2.jpg" alt="Gallery Image 2">
+            <img src="image3.jpg" alt="Gallery Image 3">
+            <img src="image4.jpg" alt="Gallery Image 4">
+            <img src="image5.jpg" alt="Gallery Image 5">
+            <img src="image6.jpg" alt="Gallery Image 6">
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form id="contactForm" method="post" action="process_form.php">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <input type="button" value="Submit" onclick="submitForm()">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Decor Company. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
